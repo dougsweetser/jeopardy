@@ -1,0 +1,449 @@
+<html>
+<head>
+	<title>Jeopardy</title>
+<STYLE type="text/css">
+  <!--
+    BODY{margin: 5px;}
+    TD{ font-size: small; border: 1px solid #708090; white-space: nowrap; vertical-align: top; padding: 5px; background-color: #E0EEEE; color: #102132} 
+    TABLE{ table-cell: nowrap; border: 3px solid #708090; border-collapse: collapse;  }
+    A:link { color: black; }
+    A:visited { color: black }
+    A:hover { color: green; }
+    .nund { text-decoration: none; }
+   .texta {
+ font: 14px Verdana, Geneva, Arial, Helvetica, sans-serif; 
+ background-color: #D7E5F2;
+ color: #102132;
+ border: 1px solid #284279;
+}
+   input {
+ font: 14px Verdana, Geneva, Arial, Helvetica, sans-serif;
+ background-color: #D7E5F2;
+ color: #102132;
+ border: 1px solid #284279;
+ margin-right: 0px;
+} 
+select { font-family: Verdana, Arial, Helvetica, sans-serif; font-size: 14px; border: #284279; border-style: solid; border-top-width: 1px; border-right-width: 1px; border-bottom-width: 1px; border-left-width: 1px;color: #102132; background-color: #D7E5F2;} 
+   
+   -->
+  </STYLE>
+
+<script type="text/javascript" src="formretain.js">
+
+/***********************************************
+* Recall Form Values script- © Dynamic Drive DHTML code library (www.dynamicdrive.com)
+* This notice MUST stay intact for legal use
+* Visit Dynamic Drive at http://www.dynamicdrive.com/ for full source code
+***********************************************/
+
+</script>
+
+<script language="JavaScript1.2">
+
+function KeyCheck(myfield,e)
+{
+var keycode;
+if (window.event) keycode = window.event.keyCode;
+else if (e) keycode = e.which;
+else return true;
+
+if (((keycode>47) && (keycode<58)) || (keycode==8) || (keycode==46) || (keycode==45) || (keycode==127) || (keycode==0)) { return true; }
+else 
+ {
+   alert("This field is for numbers only");
+   return false;
+ }
+}
+
+function addItted() {
+
+if (document.main.tedscore.value == "") 
+{ 
+  document.main.tedscore.value = "0"; 
+}
+
+
+if (document.main.tedquestion.value == "") 
+{ 
+  document.main.tedquestion.value = "0"; 
+}
+var n1 = parseFloat(document.main.tedscore.value);
+
+var n2 = parseFloat(document.main.tedquestion.value);
+
+var d1 = parseFloat(document.main.tedvalue.value);
+
+var tedoriginal = n1+n2+d1;
+
+var tedresult=Math.round(tedoriginal*100)/100;  
+
+document.main.tedscore.value = tedresult;
+}
+
+function addIterin() {
+
+if (document.main.erinscore.value == "") 
+{ 
+  document.main.erinscore.value = "0"; 
+}
+
+if (document.main.erinquestion.value == "") 
+{ 
+  document.main.erinquestion.value = "0"; 
+}
+var n11 = parseFloat(document.main.erinscore.value);
+
+var n12 = parseFloat(document.main.erinquestion.value);
+
+var d6 = parseFloat(document.main.erinvalue.value);
+
+var erinoriginal = n11+n12+d6;
+
+var erinresult=Math.round(erinoriginal*100)/100;
+
+document.main.erinscore.value = erinresult;
+}
+
+
+
+
+
+function addItdoug() {
+
+if (document.main.dougscore.value == "") 
+{ 
+  document.main.dougscore.value = "0"; 
+}
+
+if (document.main.dougquestion.value == "") 
+{ 
+  document.main.dougquestion.value = "0"; 
+}
+var n3 = parseFloat(document.main.dougscore.value);
+
+var n4 = parseFloat(document.main.dougquestion.value);
+
+var d2 = parseFloat(document.main.dougvalue.value);
+
+var dougoriginal = n3+n4+d2;
+
+var dougresult=Math.round(dougoriginal*100)/100;
+
+document.main.dougscore.value = dougresult;
+}
+
+function addItsteve() {
+
+if (document.main.stevescore.value == "") 
+{ 
+  document.main.stevescore.value = "0"; 
+}
+
+if (document.main.stevequestion.value == "") 
+{ 
+  document.main.stevequestion.value = "0"; 
+}
+var n5 = parseFloat(document.main.stevescore.value);
+
+var n6 = parseFloat(document.main.stevequestion.value);
+
+var d3 = parseFloat(document.main.stevevalue.value);
+
+var steveoriginal = n5+n6+d3;
+
+var steveresult=Math.round(steveoriginal*100)/100;
+
+document.main.stevescore.value = steveresult;
+}
+
+function addItbrian() {
+
+if (document.main.brianscore.value == "") 
+{ 
+  document.main.brianscore.value = "0"; 
+}
+
+if (document.main.brianquestion.value == "") 
+{ 
+  document.main.brianquestion.value = "0"; 
+}
+var n7 = parseFloat(document.main.brianscore.value);
+
+var n8 = parseFloat(document.main.brianquestion.value);
+
+var d4 = parseFloat(document.main.brianvalue.value);
+
+var brianoriginal = n7+n8+d4;
+
+var brianresult=Math.round(brianoriginal*100)/100;
+
+document.main.brianscore.value = brianresult;
+}
+
+function addItmike() {
+
+if (document.main.mikescore.value == "") 
+{ 
+  document.main.mikescore.value = "0"; 
+}
+
+if (document.main.mikequestion.value == "") 
+{ 
+  document.main.mikequestion.value = "0"; 
+}
+var n9 = parseFloat(document.main.mikescore.value);
+
+var n10 = parseFloat(document.main.mikequestion.value);
+
+var d5 = parseFloat(document.main.mikevalue.value);
+
+var mikeoriginal = n9+n10+d5;
+
+var mikeresult=Math.round(mikeoriginal*100)/100;
+
+document.main.mikescore.value = mikeresult;
+}
+
+function clearDoc1()
+{
+    document.main.tedvalue.value="0";
+    document.main.tedquestion.value="0";
+	document.main.erinquestion.value="0";
+	document.main.erinvalue.value="0";
+	document.main.dougquestion.value="0";
+	document.main.dougvalue.value="0";
+	document.main.stevequestion.value="0";
+	document.main.stevevalue.value="0";
+	document.main.brianquestion.value="0";
+	document.main.brianvalue.value="0";
+	document.main.mikequestion.value="0";
+	document.main.mikevalue.value="0";
+	document.main.tedscore.focus();
+
+}
+</script>
+<script>
+
+//"Accept terms" form submission- By Dynamic Drive
+//For full source code and more DHTML scripts, visit http://www.dynamicdrive.com
+//This credit MUST stay intact for use
+
+var checkobj
+
+function agreesubmit(el){
+checkobj=el
+if (document.all||document.getElementById){
+for (i=0;i<checkobj.form.length;i++){  //hunt down submit button
+var tempobj=checkobj.form.elements[i]
+if(tempobj.type.toLowerCase()=="submit")
+tempobj.disabled=!checkobj.checked
+}
+}
+}
+
+function defaultagree(el){
+if (!document.all&&!document.getElementById){
+if (window.checkobj&&checkobj.checked)
+return true
+else{
+alert("Please read/accept terms to submit form")
+return false
+}
+}
+}
+
+</script>
+
+</head>
+
+<body>
+<center><img src="images/alex-trebek.jpg"><br><br>
+
+<table border="2" style="background-color: #FFFFFF">
+<form name="main" METHOD="POST" ACTION="../cgi-bin/leifform_jep.cgi">
+<!-- <form name="main" METHOD="POST" ACTION="../cgi-bin/FormMail_jep.pl"> -->
+
+<tr>
+ <td colspan="2" class="fieldcell">Manni's Score &nbsp;<INPUT type="text" class="memorize" name="tedscore" 
+   size="7" value="0" onKeyPress="return KeyCheck(this,event);"> </td>
+ 
+<td colspan="2">Erin's Score &nbsp;<INPUT type="text" class="memorize" name="erinscore" 
+   size="7" value="0" onKeyPress="return KeyCheck(this,event);"></td>
+
+
+<td colspan="2">Dougs's Score &nbsp;<INPUT type="text" class="memorize" name="dougscore" 
+   size="7" value="0" onKeyPress="return KeyCheck(this,event);"></td>
+
+<td colspan="2">Steves's Score &nbsp;<INPUT type="text" class="memorize" name="stevescore" 
+   size="7" value="0" onKeyPress="return KeyCheck(this,event);"></td>
+
+<td colspan="2">Brian's Score &nbsp;<INPUT type="text" class="memorize" name="brianscore" 
+   size="7" value="0" onKeyPress="return KeyCheck(this,event);"></td>  
+   
+<td colspan="2">Mike's Score &nbsp;<INPUT type="text" class="memorize" name="mikescore" 
+   size="7" value="0" onKeyPress="return KeyCheck(this,event);"></td>
+
+</tr>
+<tr>
+ <td colspan="2" align="right" >Question Value &nbsp;<INPUT type="text" name="tedquestion" 
+  size="7" value="0" onKeyPress="return KeyCheck(this,event);"><br>
+<select name="tedvalue">
+<option value="2000">$2000.00</option>
+<option value="1200">$1200.00</option>
+<option value="1000">$1000.00</option>
+<option value="800">$800.00</option>
+<option value="600">$600.00</option>
+<option value="400">$400.00</option>
+<option value="200">$200.00</option>
+<option selected value="0">$0.00</option>
+<option value="-200">-$200.00</option>   
+<option value="-400">-$400.00</option>
+<option value="-600">-$600.00</option>
+<option value="-800">-$800.00</option>
+<option value="-1000">-$1000.00</option>
+<option value="-1200">-$1200.00</option>
+<option value="-2000">-$2000.00</option>
+</select></td>
+
+<td colspan="2" align="right">Question Value &nbsp;<INPUT type="text" name="erinquestion" 
+  size="7" value="0" onKeyPress="return KeyCheck(this,event);"><br>
+  <select name="erinvalue">
+<option value="2000">$2000.00</option>
+<option value="1200">$1200.00</option>
+<option value="1000">$1000.00</option>
+<option value="800">$800.00</option>
+<option value="600">$600.00</option>
+<option value="400">$400.00</option>
+<option value="200">$200.00</option>
+<option selected value="0">$0.00</option>
+<option value="-200">-$200.00</option>   
+<option value="-400">-$400.00</option>
+<option value="-600">-$600.00</option>
+<option value="-800">-$800.00</option>
+<option value="-1000">-$1000.00</option>
+<option value="-1200">-$1200.00</option>
+<option value="-2000">-$2000.00</option>
+</select>
+  </td>
+
+<td colspan="2" align="right">Question Value &nbsp;<INPUT type="text" name="dougquestion" 
+  size="7" value="0" onKeyPress="return KeyCheck(this,event);"><br>
+  <select name="dougvalue">
+<option value="2000">$2000.00</option>
+<option value="1200">$1200.00</option>
+<option value="1000">$1000.00</option>
+<option value="800">$800.00</option>
+<option value="600">$600.00</option>
+<option value="400">$400.00</option>
+<option value="200">$200.00</option>
+<option selected value="0">$0.00</option>
+<option value="-200">-$200.00</option>   
+<option value="-400">-$400.00</option>
+<option value="-600">-$600.00</option>
+<option value="-800">-$800.00</option>
+<option value="-1000">-$1000.00</option>
+<option value="-1200">-$1200.00</option>
+<option value="-2000">-$2000.00</option>
+</select>
+  </td>
+
+<td colspan="2" align="right">Question Value &nbsp;<INPUT type="text" name="stevequestion" 
+  size="7" value="0" onKeyPress="return KeyCheck(this,event);"><br>
+  <select name="stevevalue">
+<option value="2000">$2000.00</option>
+<option value="1200">$1200.00</option>
+<option value="1000">$1000.00</option>
+<option value="800">$800.00</option>
+<option value="600">$600.00</option>
+<option value="400">$400.00</option>
+<option value="200">$200.00</option>
+<option selected value="0">$0.00</option>
+<option value="-200">-$200.00</option>   
+<option value="-400">-$400.00</option>
+<option value="-600">-$600.00</option>
+<option value="-800">-$800.00</option>
+<option value="-1000">-$1000.00</option>
+<option value="-1200">-$1200.00</option>
+<option value="-2000">-$2000.00</option>
+</select>
+  
+  </td>
+
+<td colspan="2" align="right">Question Value &nbsp;<INPUT type="text" name="brianquestion" 
+  size="7" value="0" onKeyPress="return KeyCheck(this,event);"><br>
+  <select name="brianvalue">
+<option value="2000">$2000.00</option>
+<option value="1200">$1200.00</option>
+<option value="1000">$1000.00</option>
+<option value="800">$800.00</option>
+<option value="600">$600.00</option>
+<option value="400">$400.00</option>
+<option value="200">$200.00</option>
+<option selected value="0">$0.00</option>
+<option value="-200">-$200.00</option>   
+<option value="-400">-$400.00</option>
+<option value="-600">-$600.00</option>
+<option value="-800">-$800.00</option>
+<option value="-1000">-$1000.00</option>
+<option value="-1200">-$1200.00</option>
+<option value="-2000">-$2000.00</option>
+</select>
+  
+  </td>
+
+<td colspan="2" align="right">Question Value &nbsp;<INPUT type="text" name="mikequestion" 
+  size="7" value="0" onKeyPress="return KeyCheck(this,event);"><br>
+  <select name="mikevalue">
+<option value="2000">$2000.00</option>
+<option value="1200">$1200.00</option>
+<option value="1000">$1000.00</option>
+<option value="800">$800.00</option>
+<option value="600">$600.00</option>
+<option value="400">$400.00</option>
+<option value="200">$200.00</option>
+<option selected value="0">$0.00</option>
+<option value="-200">-$200.00</option>   
+<option value="-400">-$400.00</option>
+<option value="-600">-$600.00</option>
+<option value="-800">-$800.00</option>
+<option value="-1000">-$1000.00</option>
+<option value="-1200">-$1200.00</option>
+<option value="-2000">-$2000.00</option>
+</select>
+  </td>
+
+
+</tr>
+<tr>
+ <td colspan="2"><input type=button value="ManniTotal" onClick="addItted();"></td>
+
+<td colspan="2"><input type=button value="ErinTotal" onClick="addIterin();"></td>
+
+<td colspan="2"><input type=button value="DougTotal" onClick="addItdoug();"></td>
+
+<td colspan="2"><input type=button value="SteveTotal" onClick="addItsteve();"></td>
+
+<td colspan="2"><input type=button value="BrianTotal" onClick="addItbrian();"></td>
+<td colspan="2"><input type=button value="MikeTotal" onClick="addItmike();"></td>
+</tr>
+<tr>
+ <td colspan="14">&nbsp;&nbsp;<input type="Submit" value="Submit">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type=button value="Clear" onClick="clearDoc1();"></td>
+</tr> 
+</form>
+<tr valign="top">
+ <td colspan="14">
+<form name="agreeform" onSubmit="return defaultagree(this)" method="POST" action="erase_log.php">
+<input name="agreecheck" type="checkbox" onClick="agreesubmit(this)"><b>I am not a Monkey, I really do want to delete the text from the jeopardy score log.</b><br>
+<input type="submit" value="Delete Text" disabled>
+</form>
+
+</td>
+</tr> 
+</table><br>
+<img src="images/doug_sweetser.png"><br><br>
+<a href="jeopardy_log.txt">View score totals</a>
+</center>
+
+
+</body>
+</html>
